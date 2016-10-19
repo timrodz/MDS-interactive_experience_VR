@@ -28,17 +28,11 @@ public class FirstPersonController : MonoBehaviour {
 	// the amount of rotation that should be added to the camera
 	private float verticalLookRotation;
 
-	// Members
-	private Rigidbody body;
-	
-	// Drawing the dialogue prompt
-	bool canDrawDialoguePrompt = false;
-
 	// Methods //
 
 	void Awake() {
 
-		body = GetComponent<Rigidbody>();
+		
 
 	}
 	
