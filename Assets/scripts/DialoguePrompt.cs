@@ -7,9 +7,11 @@ public class DialoguePrompt : MonoBehaviour {
 	
 	private bool canInteractWithDialogue = false;
 	
-	private CanvasGroup currentCanvasGroup = null;
-	
 	private bool hasInteractedWithDialogue = false;
+
+	private CanvasGroup currentCanvasGroup = null;
+
+	private DialogueEnter dialogueScript = null;
 	
 	// Called before the object is created
 	void Awake() {
@@ -28,13 +30,19 @@ public class DialoguePrompt : MonoBehaviour {
 				
 				// Make the dialogue box visible
 				if (!hasInteractedWithDialogue) {
-					currentCanvasGroup.alpha = 1;
+					
+//					currentCanvasGroup.alpha = 1;
+					StartCoroutine(dialogueScript.FadeIn());
 					hasInteractedWithDialogue = true;
+
 				}
 				// Make the dialogue box invisible
 				else {
-					currentCanvasGroup.alpha = 0;
+					
+//					currentCanvasGroup.alpha = 0;
+					StartCoroutine(dialogueScript.FadeOut());
 					hasInteractedWithDialogue = false;
+
 				}
 				
 			} // !Input.GetKeyDown(KeyCode.E)
@@ -50,6 +58,7 @@ public class DialoguePrompt : MonoBehaviour {
 			
 			// Access the canvas group object of the current 
 			currentCanvasGroup = other.GetComponentInChildren<CanvasGroup>();
+			dialogueScript = other.GetComponentInChildren<DialogueEnter>();
 			
 			if (currentCanvasGroup.alpha == 1) {
 				hasInteractedWithDialogue = true;
@@ -69,6 +78,7 @@ public class DialoguePrompt : MonoBehaviour {
 			
 			// Reset the canvas group
 			currentCanvasGroup = null;
+			dialogueScript = null;
 			hasInteractedWithDialogue = false;
 			canInteractWithDialogue = false;
 			dialoguePromptText.enabled = false;
