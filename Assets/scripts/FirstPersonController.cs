@@ -6,12 +6,12 @@ public class FirstPersonController : MonoBehaviour {
 
 	public LayerMask groundMask;
 	
-	[Range(45f, 70f)]
-	public float fieldOfView;
+	[Range(30f, 70f)]
+	public float fieldOfView = 45f;
 
 	// Movement //
 	[Range(4.0f, 8.0f)]
-	public float speed;
+	public float speed = 6.0f;
 
 	// [Range(10f, 100f)]
 	// public float jumpForce;
@@ -30,6 +30,9 @@ public class FirstPersonController : MonoBehaviour {
 
 	// Members
 	private Rigidbody body;
+	
+	// Drawing the dialogue prompt
+	bool canDrawDialoguePrompt = false;
 
 	// Methods //
 
@@ -38,28 +41,25 @@ public class FirstPersonController : MonoBehaviour {
 		body = GetComponent<Rigidbody>();
 
 	}
-
-	// Use this for initialization
-	void Start () {
-		
-		
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 		float inputX = Input.GetAxis("Horizontal");
 		float inputY = Input.GetAxis("Vertical");
-
-		// Move the body
-		this.transform.Translate(new Vector3(inputX / speed, this.transform.position.y, inputY / speed));
+		
+		Vector3 pos = this.transform.position;
+		transform.position = new Vector3(
+			pos.x + inputX * speed *  Time.deltaTime, 
+			pos.y,
+			pos.z + inputY * speed *  Time.deltaTime
+			);
 
 		// First person rotations //
 		// This rotates the player by the up vector (y)
 		transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseSensitivityX);
 		
-		// 
+		// Calculate how much should the camera rotate vertically
 		verticalLookRotation += Input.GetAxis("Mouse Y") * mouseSensitivityY;
 		verticalLookRotation = Mathf.Clamp(verticalLookRotation, -fieldOfView, fieldOfView);
 
