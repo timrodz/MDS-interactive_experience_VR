@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Dialogue
+  - Dialogue Box
+  - Dialogue prompt
+  - Dialogue container
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Player
   - 
   - 
   - 

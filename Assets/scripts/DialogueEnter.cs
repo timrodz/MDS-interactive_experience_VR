@@ -4,13 +4,17 @@ using UnityEngine.UI;
 
 public class DialogueEnter : MonoBehaviour {
 
-	public string dialogueText;
+	public bool isTestingDialogueSize = true;
+
+	private Text dialogueBoxText;
+
+	private string tempDialogueBoxText;
 
 	[Range(0.1f, 1.0f)]
 	public float fadeTime = 0.5f;
 
-	[Range(0.01f, 0.02f)]
-	public float textAnimationDelay = 0.015f;
+	[Range(0.001f, 0.02f)]
+	public float textAnimationDelay = 0.01f;
 
 	private CanvasGroup canvas;
 
@@ -18,6 +22,7 @@ public class DialogueEnter : MonoBehaviour {
 
 	void Awake() {
 
+		dialogueBoxText = GetComponentInChildren<Text>();
 		canvas = GetComponent<CanvasGroup>();
 
 	}
@@ -25,7 +30,14 @@ public class DialogueEnter : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 
-		canvas.alpha = 0;
+		if (!isTestingDialogueSize)
+			canvas.alpha = 0;
+
+		#region animatedText
+		// Obtain the text from the dialogue box and empty it afterwards
+		//tempDialogueBoxText = dialogueBoxText.text;
+		//dialogueBoxText.text = "";
+		#endregion
 
 	}
 
@@ -42,7 +54,7 @@ public class DialogueEnter : MonoBehaviour {
 		}
 
 		canvas.alpha = 1;
-		StartCoroutine(TextIn());
+		//StartCoroutine(TextIn());
 
 	}
 
@@ -50,10 +62,6 @@ public class DialogueEnter : MonoBehaviour {
 	/// Fades the canvas group out
 	/// </summary>
 	public IEnumerator FadeOut() {
-
-		StartCoroutine(TextOut());
-
-		yield return new WaitForSeconds(fadeTime);
 
 		for (float t = 1.0f; t > 0.0f; t -= (Time.deltaTime / fadeTime)) {
 
@@ -64,19 +72,16 @@ public class DialogueEnter : MonoBehaviour {
 
 		canvas.alpha = 0;
 
-
 	}
 
 	/// <summary>
 	/// Shows the text in a typewriter style
 	/// </summary>
-	private IEnumerator TextIn() {
+	public IEnumerator TextIn() {
 
-		string text = dialogueText;
+		for (int i = 0; i <= tempDialogueBoxText.Length; i++) {
 
-		for (int i = 0; i <= text.Length; i++) {
-
-			GetComponentInChildren<Text>().text = text.Substring(0, i);
+			dialogueBoxText.text = tempDialogueBoxText.Substring(0, i);
 			yield return new WaitForSeconds(textAnimationDelay);
 
 		}
@@ -86,16 +91,16 @@ public class DialogueEnter : MonoBehaviour {
 	/// <summary>
 	/// Removes the text in a typewriter style
 	/// </summary>
-	private IEnumerator TextOut() {
+	public IEnumerator TextOut() {
 
-		string text = dialogueText;
+		for (int i = tempDialogueBoxText.Length; i >= 0; i--) {
 
-		for (int i = text.Length; i >= 0; i--) {
-
-			GetComponentInChildren<Text>().text = text.Substring(0, i);
+			dialogueBoxText.text = tempDialogueBoxText.Substring(0, i);
 			yield return new WaitForSeconds(textAnimationDelay);
 
 		}
+
+		StartCoroutine(FadeOut());
 
 	}
 
