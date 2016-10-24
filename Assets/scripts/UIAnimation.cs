@@ -1,35 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using VR = UnityEngine.VR;
 
 public class UIAnimation : MonoBehaviour {
-
-	public animationType AnimationType;
-
-	public enum animationType {
-		FadeIn,
-		FadeOut,
-		TextIn,
-		TextOut
-	};
-
-	public void Animate(animationType _at) {
-
-		switch (_at) {
-			case animationType.FadeIn:
-				break;
-			case animationType.FadeOut:
-				break;
-			case animationType.TextIn:
-				break;
-			case animationType.TextOut:
-				break;
-			default:
-				break;
-		}
-
-	}
 
 	/// <summary>
 	/// Fades the canvas group in
@@ -44,7 +17,6 @@ public class UIAnimation : MonoBehaviour {
 		}
 
 		canvas.alpha = 1;
-		//StartCoroutine(TextIn());
 
 	}
 
@@ -52,6 +24,8 @@ public class UIAnimation : MonoBehaviour {
 	/// Fades the canvas group out
 	/// </summary>
 	public static IEnumerator FadeOut(CanvasGroup canvas, float fadeTime) {
+
+		yield return new WaitForSeconds(fadeTime * 2);
 
 		for (float t = 1.0f; t > 0.0f; t -= (Time.deltaTime / fadeTime)) {
 
@@ -61,8 +35,6 @@ public class UIAnimation : MonoBehaviour {
 		}
 
 		canvas.alpha = 0;
-
-		canvas = null;
 
 	}
 
@@ -91,8 +63,6 @@ public class UIAnimation : MonoBehaviour {
 			yield return new WaitForSeconds(textDelay);
 
 		}
-
-		//StartCoroutine(FadeOut());
 
 	}
 

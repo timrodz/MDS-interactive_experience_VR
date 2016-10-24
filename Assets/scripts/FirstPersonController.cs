@@ -3,8 +3,6 @@ using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 public class FirstPersonController : MonoBehaviour {
-
-	public LayerMask groundMask;
 	
 	[Range(30f, 70f)]
 	public float fieldOfView = 45f;
@@ -12,12 +10,6 @@ public class FirstPersonController : MonoBehaviour {
 	// Movement //
 	[Range(4.0f, 8.0f)]
 	public float walkSpeed = 6.0f;
-
-	[Range(10f, 100f)]
-	public float jumpForce = 50f;
-
-//	private bool canJump = true;
-	private bool isGrounded = false;
 
 	Vector3
 	moveAmount,
@@ -64,28 +56,16 @@ public class FirstPersonController : MonoBehaviour {
 		Vector3 targetMoveAmount = moveDirection * walkSpeed;
 
 		// Smooth the movement
-		moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, 0.0f);
-		
-		if (Input.GetButtonDown("Jump") && isGrounded) {
-			body.AddForce(transform.up * jumpForce);
-		}
-
-		Ray ray = new Ray(transform.position, -transform.up);
-		RaycastHit hit;
-
-		if (Physics.Raycast(ray, out hit, 1.1f, groundMask)) {
-			isGrounded = true;
-		}
-		else {
-			isGrounded = false;
-		}
+		moveAmount = targetMoveAmount;
+		//moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, 0.1f);
 
 	}
 
 	void FixedUpdate() {
 
+
 		// The new move position will be the current one plus the move amount (converted from world space to local space)
-		Vector3 localMove = transform.TransformDirection(moveAmount) * Time.fixedDeltaTime;
+		Vector3 localMove = transform.TransformDirection(moveAmount) * Time.deltaTime;
 		body.MovePosition(body.position + localMove);
 
 	}
