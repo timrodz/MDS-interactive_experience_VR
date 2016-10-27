@@ -25,7 +25,7 @@ public class UIAnimation : MonoBehaviour {
 	/// </summary>
 	public static IEnumerator FadeOut(CanvasGroup canvas, float fadeTime) {
 
-		yield return new WaitForSeconds(fadeTime * 2);
+		//yield return new WaitForSeconds(fadeTime * 2);
 
 		for (float t = 1.0f; t > 0.0f; t -= (Time.deltaTime / fadeTime)) {
 
