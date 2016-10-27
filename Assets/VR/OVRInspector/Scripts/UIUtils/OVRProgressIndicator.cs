@@ -35,10 +35,11 @@ public class OVRProgressIndicator : MonoBehaviour
         progressImage.sortingOrder = 150;
     }
 
+  
+
     // Update is called once per frame
     void Update()
     {
-
         progressImage.sharedMaterial.SetFloat("_AlphaCutoff", 1-currentProgress);
 
     }

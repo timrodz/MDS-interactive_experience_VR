@@ -4,7 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Dialogue
+  - pickupAble
+  - bullet
+  - floor
+  - wall
+  - Fader
+  - dontmove
+  - listlast
+  - dialogueBox
   layers:
   - Default
   - TransparentFX
@@ -14,14 +21,14 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
-  - Player
+  - NoFadeOut
+  - ColliderGrid
   - Gazable
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - LitStairs1
+  - LitStairs2
+  - Wall
+  - TeleportPoints
   - 
   - 
   - 
