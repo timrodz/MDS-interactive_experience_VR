@@ -1,0 +1,56 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class PauseMenuManager : MonoBehaviour {
+
+	Canvas c;
+	CanvasGroup cv;
+
+	bool isPaused = false;
+
+	void Awake() {
+
+		c = GetComponentInChildren<Canvas>();
+		cv = c.GetComponentInChildren<CanvasGroup>();
+
+	}
+
+	void Update() {
+
+		if (Input.GetButtonDown("Cancel")) {
+
+			TogglePause();
+
+		}
+
+	}
+
+	public void TogglePause() {
+
+		isPaused = !isPaused;
+
+		if (!isPaused) {
+			StartCoroutine(UIAnimation.FadeOut(cv, 0.5f));
+
+		}
+		else {
+			StartCoroutine(UIAnimation.FadeIn(cv, 0.5f));
+		}
+
+	}
+
+	public void QuitToMenu() {
+
+		iTween.MoveBy(c.gameObject, iTween.Hash("y", 1, "time", 1, "easeType", "easeInCubic", "delay", 0.1f));
+		Invoke("LoadScene", 1.5f);
+
+	}
+
+	private void LoadScene() {
+
+		SceneManager.LoadScene(2);
+
+	}
+
+}

@@ -96,7 +96,7 @@ public class MenuManager : MonoBehaviour {
 	/// <summary>
 	/// Gets the current canvas index based on alpha values
 	/// </summary>
-	void GetCurrentCanvasIndex() {
+	private void GetCurrentCanvasIndex() {
 
 		for (int i = 0; i < canvasGroups.Length; i++) {
 
@@ -110,7 +110,7 @@ public class MenuManager : MonoBehaviour {
 	}
 	#endregion
 
-	#region MAIN_MENU
+	#region PLAY
 	public void LoadScene() {
 
 		Invoke("LoadSceneDelayed", fadeColorAnimationClip.length * 0.5f);

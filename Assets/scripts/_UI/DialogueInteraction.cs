@@ -101,8 +101,6 @@ public class DialogueInteraction : MonoBehaviour {
 			// Access the canvas group object of the current object
 			CanvasGroup[] cvGroups = other.GetComponentsInChildren<CanvasGroup>();
 
-			print(cvGroups.Length);
-
 			// The first canvas group will be the prompt text
 			promptCanvasGroup = cvGroups[0];
 
@@ -119,8 +117,6 @@ public class DialogueInteraction : MonoBehaviour {
 					hasInteractedWithDialogue = true;
 				else
 					hasInteractedWithDialogue = false;
-
-				print(hasInteractedWithDialogue);
 
 			}
 

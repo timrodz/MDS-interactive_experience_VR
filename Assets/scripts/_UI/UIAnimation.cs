@@ -29,6 +29,7 @@ public class UIAnimation : MonoBehaviour {
 	public static IEnumerator FadeOut(CanvasGroup canvas, float fadeTime) {
 
 		//yield return new WaitForSeconds(fadeTime * 2);
+		canvas.blocksRaycasts = false;
 
 		for (float t = 1.0f; t > 0.0f; t -= (Time.deltaTime / fadeTime)) {
 
@@ -38,7 +39,6 @@ public class UIAnimation : MonoBehaviour {
 		}
 
 		canvas.alpha = 0;
-		canvas.blocksRaycasts = false;
 
 	}
 
