@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenuManager : MonoBehaviour {
 
@@ -32,11 +32,12 @@ public class PauseMenuManager : MonoBehaviour {
 
 		if (!isPaused) {
 			StartCoroutine(UIAnimation.FadeOut(cv, 0.5f));
-
 		}
 		else {
 			StartCoroutine(UIAnimation.FadeIn(cv, 0.5f));
 		}
+
+		EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(null);
 
 	}
 

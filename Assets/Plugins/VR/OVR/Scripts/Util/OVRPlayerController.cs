@@ -304,7 +304,7 @@ public class OVRPlayerController : MonoBehaviour
 		moveInfluence *= 1.0f + OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger);
 #endif
 
-		Vector2 primaryAxis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+		Vector2 primaryAxis = OVRInput.Get(OVRInput. Axis2D.PrimaryThumbstick);
 
 		if(primaryAxis.y > 0.0f)
             MoveThrottle += ort * (primaryAxis.y * transform.lossyScale.z * moveInfluence * Vector3.forward);
