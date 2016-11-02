@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 471246a30af9b524897a77327b0aebca
-timeCreated: 1477952949
+guid: b77fc9222b0704f7ca69f57f81fc712e
+timeCreated: 1478125431
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -25,7 +25,7 @@ ModelImporter:
     100034: l_wlist
     100036: neck
     100038: pelvis
-    100040: polySurface5
+    100040: polySurface7
     100042: R_ankle
     100044: r_cravicre
     100046: r_erbow
@@ -64,7 +64,7 @@ ModelImporter:
     400034: l_wlist
     400036: neck
     400038: pelvis
-    400040: polySurface5
+    400040: polySurface7
     400042: R_ankle
     400044: r_cravicre
     400046: r_erbow
@@ -83,10 +83,10 @@ ModelImporter:
     400072: spine1
     400074: spine2
     400076: spine3
-    4300000: polySurface5
+    4300000: polySurface7
     7400000: Take 001
     9500000: //RootNode
-    13700000: polySurface5
+    13700000: polySurface7
   materials:
     importMaterials: 1
     materialName: 0
@@ -209,7 +209,7 @@ ModelImporter:
         weight: 1
       - path: pelvis/spine1/spine2/spine3/r_cravicre/r_shourder1/r_erbow/r_wrist/r_thumbKnuckre/r_thumbJoint1/r_thumbTip
         weight: 1
-      - path: polySurface5
+      - path: polySurface7
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -217,7 +217,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.2
+    globalScale: 1.25
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

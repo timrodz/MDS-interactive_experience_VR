@@ -24,7 +24,7 @@ public class DialogueInteraction : MonoBehaviour {
 
 	// Animation values
 	[Range(0.1f, 1f)]
-	private float containerTransitionValue = 0.2f;
+	public float dialogueTranslateValue = 0.2f;
 
 	// others
 	private bool canInteractWithDialogue = false;
@@ -48,12 +48,12 @@ public class DialogueInteraction : MonoBehaviour {
 				// Make the dialogue box visible	
 				if (!hasInteractedWithDialogue) {
 
-					iTween.MoveBy(promptCanvasGroup.gameObject, iTween.Hash("y", (containerTransitionValue * -2), "easeType", "easeInOutExpo", "loopType", "none", "delay", 0.1));
+					iTween.MoveBy(promptCanvasGroup.gameObject, iTween.Hash("y", -0.4f, "easeType", "easeInOutExpo", "loopType", "none", "delay", 0.1f));
 
 					foreach (CanvasGroup child in containers) {
 
 						StartCoroutine(UIAnimation.FadeIn(child, 0.5f));
-						iTween.MoveBy(child.gameObject, iTween.Hash("y", containerTransitionValue, "easeType", "easeInOutExpo", "loopType", "none", "delay", 0.1));
+						iTween.MoveBy(child.gameObject, iTween.Hash("y", dialogueTranslateValue, "easeType", "easeInOutExpo", "loopType", "none", "delay", 0.1f));
 
 					}
 
@@ -63,13 +63,12 @@ public class DialogueInteraction : MonoBehaviour {
 				// Make the dialogue box invisible
 				else {
 
-					iTween.MoveBy(promptCanvasGroup.gameObject, iTween.Hash("y", (containerTransitionValue * 2), "easeType", "easeInOutExpo", "loopType", "none", "delay", 0.1));
+					iTween.MoveBy(promptCanvasGroup.gameObject, iTween.Hash("y", 0.4f, "easeType", "easeInOutExpo", "loopType", "none", "delay", 0.1f));
 
 					foreach (CanvasGroup child in containers) {
-
-						StartCoroutine(UIAnimation.FadeOut(child, 0.5f));
+						
 						Invoke("FadeOutWithTime", 0.5f);
-						iTween.MoveBy(child.gameObject, iTween.Hash("y", -containerTransitionValue, "easeType", "easeInOutExpo", "loopType", "none", "delay", 0));
+						iTween.MoveBy(child.gameObject, iTween.Hash("y", -dialogueTranslateValue, "easeType", "easeInOutExpo", "loopType", "none", "delay", 0));
 
 					}
 
@@ -82,18 +81,11 @@ public class DialogueInteraction : MonoBehaviour {
 		} // !canInteractWithDialogue
 
 	}
-
-	void FadeOutWithTime() {
-
-		foreach (CanvasGroup child in containers) {
-
-			StartCoroutine(UIAnimation.FadeOut(child, 0.5f));
-
-		}
-
-	}
-
-	// This method is called everytime the entity enters a collider that is set to work as a trigger
+		
+	/// <summary>
+	/// This method is called everytime the entity enters a collider that is set to work as a trigger
+	/// </summary>
+	/// <param name="other"> the trigger that caused the collision</param>
 	void OnTriggerEnter(Collider other) {
 
 		if (other.tag == triggerTag) {
@@ -140,6 +132,19 @@ public class DialogueInteraction : MonoBehaviour {
 			containers.Clear();
 			hasInteractedWithDialogue = false;
 			canInteractWithDialogue = false;
+
+		}
+
+	}
+
+	/// <summary>
+	/// To be called using the Invoke function
+	/// </summary>
+	private void FadeOutWithTime() {
+
+		foreach (CanvasGroup child in containers) {
+
+			StartCoroutine(UIAnimation.FadeOut(child, 0.5f));
 
 		}
 
