@@ -104,7 +104,6 @@ GameObject:
   - 114: {fileID: 1966318}
   - 114: {fileID: 1966317}
   - 114: {fileID: 1966316}
-  - 82: {fileID: 1966322}
   m_Layer: 5
   m_Name: MENU MANAGER
   m_TagString: dialogueBox
@@ -237,80 +236,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 875, y: 492}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!82 &1966322
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1966315}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &44049790
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010030556854, guid: 78e5a3324ded195469d8aec05ee257ea, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1000011116352508, guid: 78e5a3324ded195469d8aec05ee257ea, type: 2}
       propertyPath: m_IsActive
@@ -797,6 +722,129 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 284330832}
+--- !u!1 &286220059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 286220061}
+  - 81: {fileID: 286220062}
+  - 82: {fileID: 286220060}
+  - 114: {fileID: 286220063}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!82 &286220060
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286220059}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c10b8f625fee10440b7a05601b8d2f39, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &286220061
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286220059}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!81 &286220062
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286220059}
+  m_Enabled: 1
+--- !u!114 &286220063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286220059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e183a71fb67df4e8194b92eb8cd30f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &400241697
 Prefab:
   m_ObjectHideFlags: 0
@@ -1045,7 +1093,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: VR Valley
+  m_Text: A walk in the park
 --- !u!222 &463691514
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1514,7 +1562,7 @@ Transform:
   m_Children:
   - {fileID: 906624034}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &591695613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,7 +1648,7 @@ MonoBehaviour:
   m_Text: "Charmaine Lim - Researcher and programmer\nDerek Nicoll - Environmental
     artist and writer\nJuan Rodr\xEDguez (@timrodz) - UI/UX and programmer\nMitchell
     Currie - Writer and programmer\nThomas Greentree - Character artist\n\nVR development
-    and testing were possible thanks to Media Design School (Auckland, New Zealand)."
+    and testing were possible thanks to Media Design School, Auckland, New Zealand."
 --- !u!222 &591695617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2344,6 +2392,17 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011688390690, guid: d61316ce09a6b4d7eadb4c7e5dfa2f76,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Welcome to A Walk In The Park, a virtual reality experience where you
+        dialogue with characters who suffer from mental illnesses and their human
+        equivalents.
+
+
+        In order to interact with any button, simply look at them and wait until the
+        emerging bar around them finishes loading. Try it now with the button below!'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d61316ce09a6b4d7eadb4c7e5dfa2f76, type: 2}
   m_IsPrefabParent: 0
@@ -2434,10 +2493,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "New Zealand:\nLifeline \u2013 0800 543 354 or (09) 5222 999 within Auckland\nYouthline\r
-    \u2013 0800 376 633, free text 234\n\nU.S.A:\nHopeline \u2013 1 800 784 2433\nSuicide
-    Prevention Lifeline \u2013 1 800 273 8255\n\nU.K:\nThe Samaritans \u2013 116 123\nMind
-    \u2013 0300 123 3393 or text 86463"
+  m_Text: "U.S.A:\nHopeline \u2013 1 800 784 2433\nSuicide Prevention Lifeline \u2013
+    1 800 273 8255\n\nU.K:\nThe Samaritans \u2013 116 123\nMind \u2013 0300 123 3393
+    or text 86463\n\nNew Zealand:\nLifeline \u2013 0800 543 354 or (09) 5222 999 within
+    Auckland\nYouthline\r \u2013 0800 376 633 or text 234"
 --- !u!222 &1239046653
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3789,7 +3848,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: VR Park
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1809491121
@@ -4109,6 +4168,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 2040692319}
+    - target: {fileID: 114000012683637918, guid: 7f50c41550554407491b1b31e22167f0,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f50c41550554407491b1b31e22167f0, type: 2}
   m_IsPrefabParent: 0
@@ -4138,9 +4202,9 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2027533812}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &2040692315
 GameObject:

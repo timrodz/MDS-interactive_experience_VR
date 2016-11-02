@@ -50,6 +50,7 @@ public class PauseMenuManager : MonoBehaviour {
 
 	private void LoadScene() {
 
+		print("Quitting to menu");
 		SceneManager.LoadScene(2);
 
 	}

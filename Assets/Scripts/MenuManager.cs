@@ -78,12 +78,7 @@ public class MenuManager : MonoBehaviour {
 		StartCoroutine(FadeObjectIn(cv, -1, 0.3f));
 
 	}
-
-	/// <summary>
-	/// 
-	/// </summary>
-	/// <param name="cv">The canvas group</param>
-	/// <param name="moveAmount">The amount to translate</param>
+	
 	private IEnumerator FadeObjectIn(CanvasGroup cv, float moveAmount, float timeToWait) {
 
 		yield return new WaitForSeconds(timeToWait);
@@ -109,14 +104,18 @@ public class MenuManager : MonoBehaviour {
 
 	}
 	#endregion
-
-	#region PLAY
+	
 	public void LoadScene() {
 
 		Invoke("LoadSceneDelayed", fadeColorAnimationClip.length * 0.5f);
 
+		gameTitle.SetParent(gameTitle.parent.parent);
 		iTween.MoveBy(gameTitle.gameObject, iTween.Hash("y", 5, "speed", 2, "easeType", "easeInOutExpo", "loopType", "none"));
-		iTween.MoveBy(canvasGroups[1].gameObject, iTween.Hash("y", -5, "speed", 2, "easeType", "easeInOutExpo", "loopType", "none"));
+		
+		if (canvasGroups[1].name == "Menu - Main (GameObject)")
+			iTween.MoveBy(canvasGroups[1].gameObject, iTween.Hash("y", -5, "speed", 2, "easeType", "easeInOutExpo", "loopType", "none"));
+		else
+			iTween.MoveBy(canvasGroups[0].gameObject, iTween.Hash("y", -5, "speed", 2, "easeType", "easeInOutExpo", "loopType", "none"));
 
 		//Set the trigger of Animator animColorFade to start transition to the FadeToOpaque state.
 		animColorFade.SetTrigger("fade");
@@ -134,6 +133,5 @@ public class MenuManager : MonoBehaviour {
 		Application.Quit();
 
 	}
-	#endregion
 
 }
