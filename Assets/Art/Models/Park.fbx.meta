@@ -82,6 +82,8 @@ ModelImporter:
     100148: rocks
     100150: rotunda
     100152: Trees
+    100154: polySurface3566_MeshPart4
+    100156: polySurface3636_MeshPart4
     400000: benches
     400002: clock_NSEW_sign
     400004: flowers_grass
@@ -159,6 +161,8 @@ ModelImporter:
     400148: rocks
     400150: rotunda
     400152: Trees
+    400154: polySurface3566_MeshPart4
+    400156: polySurface3636_MeshPart4
     2300000: benches
     2300002: Park_gate
     2300004: pCube104
@@ -211,6 +215,8 @@ ModelImporter:
     2300098: polySurface3669
     2300100: polySurface53
     2300102: rotunda
+    2300104: polySurface3566_MeshPart4
+    2300106: polySurface3636_MeshPart4
     3300000: benches
     3300002: Park_gate
     3300004: pCube104
@@ -263,6 +269,8 @@ ModelImporter:
     3300098: polySurface3669
     3300100: polySurface53
     3300102: rotunda
+    3300104: polySurface3566_MeshPart4
+    3300106: polySurface3636_MeshPart4
     4300000: polySurface3572
     4300002: polySurface53
     4300004: pCube104
@@ -315,6 +323,8 @@ ModelImporter:
     4300098: polySurface3666
     4300100: polySurface3668
     4300102: polySurface3669
+    4300104: polySurface3566_MeshPart4
+    4300106: polySurface3636_MeshPart4
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -340,7 +350,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -356,9 +366,9 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 0
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
