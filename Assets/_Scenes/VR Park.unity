@@ -294,7 +294,7 @@ Prefab:
         Pan the camera with your mouse
 
 
-        Press ESC/ESCAPE for options
+        Press Escape for options
 
 
         Enjoy the game!'
@@ -981,32 +981,30 @@ Prefab:
     - target: {fileID: 114000010256932328, guid: 4db6b77241bd74f4abca512dfed88ce2,
         type: 2}
       propertyPath: m_Text
-      value: "\u201COne common misconception the public has about serial murder and
-        other serious crimes is that mental illness must play a major role. This is
-        because the public generally assumes that in order for someone to commit these
-        acts, they have to be \u2018crazy\u2019 or \u2018insane.\u2019\u201D\n\n\u201CIndeed
-        it is not normal for humans to be extremely violent and commit serious crimes.
-        That doesn\u2019t mean that mental disorders necessarily cause or contribute
-        significantly to this kind of behaviour.\u201D\n\n\u201CInsanity is actually
-        not a psychiatric or mental health term, but instead a legal concept.\u201D\n\n\u201CVideo
-        game villains are frequently referred to as \u2018insane\u2019. There is a
-        common misunderstanding to the portrayal of insanity and what it means to
-        be legally insane.\u201D\n\n\u201CIn the real world, only 1 percent of criminal
-        cases plead not guilty by reason of insanity, and only 20 percent of those
-        1 percent are successful.\u201D"
+      value: "One common misconception the public has about serial murder and other
+        serious crimes is that mental illness must play a major role. This is because
+        the public generally assumes that in order for someone to commit these acts,
+        they have to be \u2018crazy\u2019 or \u2018insane.\n\nIndeed it is not normal
+        for humans to be extremely violent and commit serious crimes. That doesn\u2019t
+        mean that mental disorders necessarily cause or contribute significantly to
+        this kind of behaviour.\n\nInsanity is actually not a psychiatric or mental
+        health term, but instead a legal concept. Video game villains are frequently
+        referred to as \u2018insane\u2019. There is a common misunderstanding to the
+        portrayal of insanity and what it means to be legally insane.\n\nIn the real
+        world, only 1 percent of criminal cases plead not guilty by reason of insanity,
+        and only 20 percent of those 1 percent are successful."
       objectReference: {fileID: 0}
     - target: {fileID: 114000011481632546, guid: 4db6b77241bd74f4abca512dfed88ce2,
         type: 2}
       propertyPath: m_Text
-      value: "\u201CDo you recognise me? I bet you do, even if I am a far cry away
-        from home.\u201D\n\n\u201CWant to know the definition of insanity? I can explain
-        it to you.\u201D\n\n\u201CInsanity is doing the exact same thing, over and
-        over again, expecting things to change. That is crazy; but the first time
-        somebody told me that...I don't know. I thought they were tricking me, so
-        boom \u2014 I shot him.\u201D\n\n\"The thing is, he was right. And then I
-        started seeing: everywhere I looked, everywhere I looked, all these people,
-        everywhere I looked, doing the exact same thing... over and over and over
-        and over again thinking this time, it's gonna be different.\u201D"
+      value: "Do you recognise me? I bet you do, even if I am a far cry away from
+        home. Want to know the definition of insanity? I can explain it to you.\n\nInsanity
+        is doing the exact same thing, over and over again, expecting things to change.
+        That is crazy; but the first time somebody told me that...I don't know. I
+        thought they were tricking me, so boom \u2014 I shot him.\n\nThe thing is,
+        he was right. And then I started seeing: everywhere I looked, everywhere I
+        looked, all these people, everywhere I looked, doing the exact same thing...
+        over and over and over and over again thinking this time, it's gonna be different."
       objectReference: {fileID: 0}
     - target: {fileID: 114000012054627186, guid: 4db6b77241bd74f4abca512dfed88ce2,
         type: 2}
@@ -1298,21 +1296,20 @@ Prefab:
     - target: {fileID: 114000010256932328, guid: 4db6b77241bd74f4abca512dfed88ce2,
         type: 2}
       propertyPath: m_Text
-      value: "\"I suffer from schizophrenia which involves being out of touch with
-        reality,\"\n\n\u201CI have an inability to discern what is real and not real,
-        to think clearly, have normal emotional responses, and act normally in social
-        situations.\u201D\n\n\u201CYou may think I\u2019m a violent person, based
-        on the common misconception that people who suffer from schizophrenia are
-        extremely violent. In fact, people that suffer from schizophrenia are less
-        violent and are much more likely to be victims than the aggressors.\u201D\n\n\u201CThe
-        symptoms include an inability to experience pleasure, diminished emotional
-        range and lack of motivation.  However, violence is not a symptom of schizophrenia.\u201D\n\n\u201CI
-        am not violent toward others. Instead I\u2019m quite withdrawn and often prefer
-        to be left alone.\u201D \n\n\u201CIt is quite common for me to experience
-        hallucinations, though they are mostly auditory. I do have the occasional
-        visual hallucination, but not very often.\u201D\n\n\u201CAlthough there is
-        no cure for schizophrenia, the symptoms are highly treatable using a combination
-        of medication and therapy.\u201D"
+      value: "I suffer from schizophrenia which involves being out of touch with reality.
+        I have an inability to discern what is real and not real, to think clearly,
+        have normal emotional responses, and act normally in social situations.\n\nYou
+        may think I\u2019m a violent person, based on the common misconception that
+        people who suffer from schizophrenia are extremely violent. In fact, people
+        that suffer from schizophrenia are less violent and are much more likely to
+        be victims than the aggressors.\n\nThe symptoms include an inability to experience
+        pleasure, diminished emotional range and lack of motivation.  However, violence
+        is not a symptom of schizophrenia.\n\nI am not violent toward others. Instead
+        I\u2019m quite withdrawn and often prefer to be left alone.\u201D\n\nIt is
+        quite common for me to experience hallucinations, though they are mostly auditory.
+        I do have the occasional visual hallucination, but not very often.\n\nAlthough
+        there is no cure for schizophrenia, the symptoms are highly treatable using
+        a combination of medication and therapy."
       objectReference: {fileID: 0}
     - target: {fileID: 225000012795918910, guid: 4db6b77241bd74f4abca512dfed88ce2,
         type: 2}
@@ -1340,6 +1337,22 @@ Prefab:
         type: 2}
       propertyPath: m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011481632546, guid: 4db6b77241bd74f4abca512dfed88ce2,
+        type: 2}
+      propertyPath: m_Text
+      value: "I am often described as a psychotic homicidal maniac. My violence is
+        often blamed on my schizophrenia that can put me out of touch with reality.\n\r\nNormally
+        someone who is \u2018psychotic\u2019 is experiencing symptoms of psychosis,
+        a mental disorder, which can include auditory hallucinations, such as hearing
+        voices; visual hallucinations, where they see objects that are not truly there.\n\r\nBut
+        I don\u2019t hear voices, I don\u2019t have trouble telling what\u2019s real
+        from what isn\u2019t, I don\u2019t feel that the people I\u2019m hurting somehow
+        deserve it, I just think it's funny!\n\r\nI may commit crimes for reasons
+        that don\u2019t make sense to you, but I know full well that the things I\u2019m
+        doing are real, and are seen as \u2018wrong\u2019 by society.\n\r\nI have
+        plenty of motivation and get a lot of enjoyment from concocting complicated
+        schemes to wreak havoc on society."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4db6b77241bd74f4abca512dfed88ce2, type: 2}
@@ -1856,34 +1869,32 @@ Prefab:
     - target: {fileID: 114000011481632546, guid: 4db6b77241bd74f4abca512dfed88ce2,
         type: 2}
       propertyPath: m_Text
-      value: "\u201CYou may have noticed from my unusual behaviour that I look anxious.\u201D\n\n\u201CHowever,
-        I am actually \u2018neurotic\u2019. This means I suffer from a range of anxiety
-        related disorders, chosen at random. I know the term \u2018neurotic\u2019
+      value: "You may have noticed from my unusual behaviour that I look anxious.
+        However, I am actually \u2018neurotic\u2019. This means I suffer from a range
+        of anxiety related disorders, chosen at random.\n\nI know the term \u2018neurotic\u2019
         is outdated and a primitive way to describe a mental illness, but that\u2019s
-        just the way I was created.\u201D \n\n\u201CI often feel anxious about things,
-        especially mundane tasks around the house. But that\u2019s alright - as soon
-        as I get around to doing that task, I\u2019m instantly calm again.\u201D\n\n\u201CI
-        can\u2019t quite get a grip on life and will often \u2018freak out\u2019 at
-        the click of a button. This can distress those around me, but immediately
-        afterwards I will be fine.\u201D\n\n\u201CI also can\u2019t get sad or angry,
-        I just feel anxious instead.\u201D "
+        just the way I was created.\n\nI often feel anxious about things, especially
+        mundane tasks around the house. But that\u2019s alright - as soon as I get
+        around to doing that task, I\u2019m instantly calm again.\n\nI can\u2019t
+        quite get a grip on life and will often \u2018freak out\u2019 at the click
+        of a button. This can distress those around me, but immediately afterwards
+        I will be fine. I also can\u2019t get sad or angry, I just feel anxious instead."
       objectReference: {fileID: 0}
     - target: {fileID: 114000010256932328, guid: 4db6b77241bd74f4abca512dfed88ce2,
         type: 2}
       propertyPath: m_Text
-      value: "\u201CYou might say that I don\u2019t look anxious, but anxiety doesn\u2019t
+      value: "You might say that I don\u2019t look anxious, but anxiety doesn\u2019t
         necessarily have a \u2018look.\u2019 I don\u2019t have to be trembling or
-        hyperventilating to be anxious.\u201D \n\n\u201CWhen I\u2019m being quiet,
-        I\u2019m not sad, bored, tired or whatever else they want to fill in the blank
-        with. There\u2019s just so much going on in my mind, sometimes I can\u2019t
-        keep up with what\u2019s going on around me.\u201D \n\n\u201CSometimes I just
-        need to be alone. It\u2019s not personal. I\u2019m not mad. I don\u2019t have
-        some problem. I don\u2019t just need to shake it off and do something fun.
-        I just need to be alone so I can reset myself and breathe a little.\u201D
-        \n\n\_\u201CSometimes when I\u2019m feeling the anxiety, I have no idea why
-        I\u2019m anxious.\u201D\_\n\n\u201CI never know when it\u2019s going to hit
-        me. And when it does, I just need you to support me. I can\u2019t just turn
-        it off.\u201D\n\n\u201CJust remember, I\u2019m still me. I\u2019m not my anxiety.\u201D"
+        hyperventilating to be anxious. \n\nWhen I\u2019m being quiet, I\u2019m not
+        sad, bored, tired or whatever else they want to fill in the blank with. There\u2019s
+        just so much going on in my mind, sometimes I can\u2019t keep up with what\u2019s
+        going on around me. \n\nSometimes I just need to be alone. It\u2019s not personal.
+        I\u2019m not mad. I don\u2019t have some problem. I don\u2019t just need to
+        shake it off and do something fun. I just need to be alone so I can reset
+        myself and breathe a little.\n\nSometimes when I\u2019m feeling the anxiety,
+        I have no idea why I\u2019m anxious. I never know when it\u2019s going to
+        hit me. And when it does, I just need you to support me. Ican\u2019t just
+        turn it off.\n\nJust remember, I\u2019m still me. I\u2019m not my anxiety."
       objectReference: {fileID: 0}
     - target: {fileID: 114000012054627186, guid: 4db6b77241bd74f4abca512dfed88ce2,
         type: 2}
@@ -2082,7 +2093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2067589742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2147,7 +2158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260efd273b99c7d43b42454566201d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutTime: 7
+  fadeOutTime: 5
 --- !u!225 &2067589746
 CanvasGroup:
   m_ObjectHideFlags: 0

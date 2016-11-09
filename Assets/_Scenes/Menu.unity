@@ -1509,6 +1509,7 @@ MonoBehaviour:
   triggerTag: dialogueBox
   interactionKey: 32
   dialoguePromptFadeTime: 0.1
+  dialogueTranslateValue: 0.2
 --- !u!114 &561734732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2396,8 +2397,8 @@ Prefab:
         type: 2}
       propertyPath: m_Text
       value: 'Welcome to A Walk In The Park, a virtual reality experience where you
-        dialogue with characters who suffer from mental illnesses and their human
-        equivalents.
+        can interact with both video game characters and real people who suffer from
+        mental illnessess.
 
 
         In order to interact with any button, simply look at them and wait until the
@@ -3718,9 +3719,9 @@ MonoBehaviour:
 
 
     Games should provide help to patients in a way that helps defeat misconceptions
-    about the victims of any mental illnesses, the benefits being such as inclusion
-    to society, increased willingness to seek treatment and an improved professional
-    life.'
+    about the victims of any mental illnesses, and promote benefits being such as
+    inclusion to society, increased willingness to seek treatment and an improved
+    professional life.'
 --- !u!222 &1656190066
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4192,7 +4193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 673341fa1c89bcf4e88aca0d8d4a17bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SecondsToWait: 0
+  SecondsToWait: 8
   shouldFadeUpwards: 1
   moveAmount: 0.2
 --- !u!225 &2027533814

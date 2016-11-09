@@ -129,9 +129,7 @@ public class DialogueInteraction : MonoBehaviour {
 
 			// Reset the variable states
 			StartCoroutine(UIAnimation.FadeOut(promptCanvasGroup, dialoguePromptFadeTime));
-			containers.Clear();
-			hasInteractedWithDialogue = false;
-			canInteractWithDialogue = false;
+			Invoke("ExitTrigger", 1f);
 
 		}
 
@@ -147,6 +145,17 @@ public class DialogueInteraction : MonoBehaviour {
 			StartCoroutine(UIAnimation.FadeOut(child, 0.5f));
 
 		}
+
+	}
+
+	/// <summary>
+	/// Clear the list of containers and disable interaction upon calling this method
+	/// </summary>
+	private void ExitTrigger() {
+
+		containers.Clear();
+		hasInteractedWithDialogue = false;
+		canInteractWithDialogue = false;
 
 	}
 

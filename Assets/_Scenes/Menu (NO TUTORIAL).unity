@@ -1632,6 +1632,7 @@ MonoBehaviour:
   triggerTag: dialogueBox
   interactionKey: 32
   dialoguePromptFadeTime: 0.1
+  dialogueTranslateValue: 0.2
 --- !u!114 &561734732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3311,9 +3312,9 @@ MonoBehaviour:
 
 
     Games should provide help to patients in a way that helps defeat misconceptions
-    about the victims of any mental illnesses, the benefits being such as inclusion
-    to society, increased willingness to seek treatment and an improved professional
-    life.'
+    about the victims of any mental illnesses, and promote benefits being such as
+    inclusion to society, increased willingness to seek treatment and an improved
+    professional life.'
 --- !u!222 &1716862702
 CanvasRenderer:
   m_ObjectHideFlags: 0
