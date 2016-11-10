@@ -94,6 +94,11 @@ public class OVRGazeScroller : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
+        
+        // Make it unable to scroll if the dialogue box is invisible
+        if (this.transform.parent.GetComponent<CanvasGroup>().alpha == 0)
+            return;
+        
         RefreshContentSize();
         bool canGoUp = scrollRect.verticalNormalizedPosition*scrollRange < (scrollRange -0.01f);
         bool canGoDown = scrollRect.verticalNormalizedPosition*scrollRange > 0.01f; 
